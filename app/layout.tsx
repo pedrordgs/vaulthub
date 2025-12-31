@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Pedro Rodrigues" }],
   creator: "Pedro Rodrigues",
   publisher: "VaultHub",
-  metadataBase: new URL("https://vaulthub.vercel.app"),
+  metadataBase: new URL("https://vaulthub-app.vercel.app"),
   openGraph: {
     title: "VaultHub - Ansible Vault Encryption & Decryption",
     description: "A modern, secure web application for encrypting and decrypting Ansible vault strings.",
-    url: "https://vaulthub.vercel.app",
+    url: "https://vaulthub-app.vercel.app",
     siteName: "VaultHub",
     locale: "en_US",
     type: "website",
