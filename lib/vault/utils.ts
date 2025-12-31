@@ -6,6 +6,9 @@ const pbkdf2Async = promisify(pbkdf2);
 
 /**
  * Derives cryptographic keys from password using PBKDF2-HMAC-SHA256
+ * @param password - The password to derive keys from
+ * @param salt - The salt buffer to use for key derivation
+ * @returns Object containing encryptionKey, hmacKey, and iv buffers
  */
 export async function deriveKeys(password: string, salt: Buffer): Promise<{
   encryptionKey: Buffer;
