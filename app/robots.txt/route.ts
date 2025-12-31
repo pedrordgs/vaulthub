@@ -5,7 +5,7 @@ export function GET() {
 User-agent: *
 Allow: /
 
-Sitemap: https://vaulthub.vercel.app/sitemap.xml
+Sitemap: https://vaulthub-app.vercel.app/sitemap.xml
 `;
 
   return new NextResponse(robotsTxt, {

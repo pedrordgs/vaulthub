@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/pedrordgs/vaulthub/issues"
   },
-  "homepage": "https://vaulthub.vercel.app",
+  "homepage": "https://vaulthub-app.vercel.app",
   "keywords": [
     "ansible",
     "vault",
