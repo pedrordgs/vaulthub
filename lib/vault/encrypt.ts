@@ -1,41 +1,6 @@
-import { createCipheriv, createHmac, pbkdf2, randomBytes } from "crypto";
-import { promisify } from "util";
-
-const pbkdf2Async = promisify(pbkdf2);
-
-// Ansible Vault 1.1 constants
-const VAULT_HEADER = "$ANSIBLE_VAULT";
-const VAULT_VERSION = "1.1";
-const VAULT_CIPHER = "AES256";
-const PBKDF2_ITERATIONS = 10000;
-const KEY_LENGTH = 32; // 256 bits for AES256
-const IV_LENGTH = 16; // 128 bits for AES CTR mode
-const SALT_LENGTH = 32; // 256 bits
-const HMAC_LENGTH = 32; // 256 bits (SHA256)
-
-/**
- * Derives cryptographic keys from password using PBKDF2-HMAC-SHA256
- */
-async function deriveKeys(password: string, salt: Buffer): Promise<{
-  encryptionKey: Buffer;
-  hmacKey: Buffer;
-  iv: Buffer;
-}> {
-  // Derive 80 bytes total: 32 for encryption key + 32 for HMAC key + 16 for IV
-  const derivedKey = await pbkdf2Async(
-    password,
-    salt,
-    PBKDF2_ITERATIONS,
-    KEY_LENGTH + HMAC_LENGTH + IV_LENGTH,
-    "sha256"
-  );
-
-  return {
-    encryptionKey: derivedKey.subarray(0, KEY_LENGTH),
-    hmacKey: derivedKey.subarray(KEY_LENGTH, KEY_LENGTH + HMAC_LENGTH),
-    iv: derivedKey.subarray(KEY_LENGTH + HMAC_LENGTH, KEY_LENGTH + HMAC_LENGTH + IV_LENGTH),
-  };
-}
+import { createCipheriv, createHmac, randomBytes } from "crypto";
+import { VAULT_HEADER, VAULT_VERSION, VAULT_CIPHER, SALT_LENGTH } from "./constants";
+import { deriveKeys } from "./utils";
 
 /**
  * Formats encrypted data into Ansible Vault format with proper line wrapping
