@@ -146,7 +146,9 @@ describe('encrypt action', () => {
     const result = await encrypt(formData);
 
     expect(result.success).toBe(false);
-    expect(result.error).toBeDefined();
+    if (!result.success) {
+      expect(result.error).toBeDefined();
+    }
   });
 });
 
@@ -269,4 +271,3 @@ describe('decrypt action', () => {
     expect(result.success).toBe(false);
   });
 });
-
