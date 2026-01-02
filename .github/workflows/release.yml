@@ -2,7 +2,7 @@ name: Release
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 env:
   DOCKER_IMAGE: pedrordgs/vaulthub
