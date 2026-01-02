@@ -74,5 +74,17 @@ if [ $? -ne 0 ]; then
     echo "${YELLOW}Note: Warnings are treated as errors in this project.${NC}"
     exit 1
 fi
+echo "${GREEN}✓ Linter passed${NC}"
+
+# Run type-check
+echo "Running type-check..."
+npm run type-check
+
+# Check if type-check passed
+if [ $? -ne 0 ]; then
+    echo "${RED}❌ Type-check found errors. Please fix them before committing.${NC}"
+    exit 1
+fi
+echo "${GREEN}✓ Type-check passed${NC}"
 
 echo "${GREEN}✓ All pre-commit checks passed!${NC}"
