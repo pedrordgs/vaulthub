@@ -65,9 +65,6 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Run npm audit
         run: npm audit --audit-level=moderate
         continue-on-error: true
