@@ -43,14 +43,14 @@ function parseVaultData(encryptedText: string): { salt: Buffer; hmac: Buffer; ci
   // Split by newlines to get salt_hex, hmac_hex, ciphertext_hex
   const parts = innerPayload.split("\n");
   
-  if (parts.length < 3) {
-    throw new Error("Invalid vault format: expected salt, hmac, and ciphertext separated by newlines");
+  // Ansible vault format requires exactly 3 parts: salt, hmac, and ciphertext
+  if (parts.length !== 3) {
+    throw new Error("Invalid vault format: expected exactly salt, hmac, and ciphertext separated by newlines");
   }
 
   const saltHex = parts[0];
   const hmacHex = parts[1];
-  // Ciphertext might span multiple lines if there were embedded newlines, so join the rest
-  const ciphertextHex = parts.slice(2).join("");
+  const ciphertextHex = parts[2];
 
   // Validate each hex component
   if (!/^[0-9a-fA-F]*$/.test(saltHex) || !/^[0-9a-fA-F]*$/.test(hmacHex) || !/^[0-9a-fA-F]*$/.test(ciphertextHex)) {
