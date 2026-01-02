@@ -48,13 +48,6 @@ const eslintConfig = defineConfig([
       "@typescript-eslint/no-require-imports": "off",
     },
   },
-  // Specifically allow require() in test files
-  {
-    files: ["**/__tests__/**/*.js", "**/*.test.js"],
-    rules: {
-      "@typescript-eslint/no-require-imports": "off",
-    },
-  },
 ]);
 
 export default eslintConfig;
