@@ -1,50 +1,29 @@
 # Changelog
 
-All notable changes to VaultHub will be documented in this file.
+All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-12-31
+## [Unreleased]
 
-### 🎉 Initial Release
+## [1.0.0] - 2026-01-02
 
-VaultHub 1.0.0 is now production-ready! This release marks the official launch of VaultHub as a secure, stateless Ansible vault encryption/decryption platform.
+### Added
 
-### ✨ Features
+- Ansible Vault encryption - encrypt plain text strings into Ansible vault format
+- Ansible Vault decryption - decrypt Ansible vault-encrypted strings back to plain text
+- Modern UI/UX with clean, intuitive interface built with Next.js and shadcn/ui
+- Dark mode support with automatic theme detection and manual toggle
+- Server-side processing for all encryption/decryption operations
+- Input validation using Zod schemas
+- One-click copy to clipboard functionality for results
+- Toast notifications for user-friendly feedback
+- Responsive mobile-first design
+- Stateless architecture with no data persistence
+- Self-hosted deployment documentation
+- GitHub Actions CI/CD pipeline with lint, type-check, tests, and build
+- Release workflow with Docker image publishing to Docker Hub
 
-- **Ansible Vault Encryption** - Encrypt plain text strings into Ansible vault format
-- **Ansible Vault Decryption** - Decrypt Ansible vault-encrypted strings back to plain text
-- **Modern UI/UX** - Clean, intuitive interface built with Next.js and shadcn/ui
-- **Dark Mode Support** - Automatic theme detection with manual toggle
-- **Server-Side Processing** - All encryption/decryption happens server-side for security
-- **Input Validation** - Comprehensive validation using Zod schemas
-- **Copy to Clipboard** - One-click copy functionality for results
-- **Toast Notifications** - User-friendly feedback for all operations
-- **Responsive Design** - Mobile-first design that works on all devices
-- **Stateless Architecture** - No data persistence, no database required
-
-### 🐳 Deployment
-
-- **Vercel Deployment** - One-click deployment to Vercel
-- **Docker Support** - Production-ready Dockerfile with multi-stage builds
-- **Docker Compose** - Easy local deployment configuration
-- **Self-Hosted** - Complete instructions for self-hosted deployments
-
----
-
-## Release Notes Format
-
-### Types of Changes
-
-- `Added` - New features
-- `Changed` - Changes in existing functionality
-- `Deprecated` - Soon-to-be removed features
-- `Removed` - Removed features
-- `Fixed` - Bug fixes
-- `Security` - Security improvements
-
----
-
+[Unreleased]: https://github.com/pedrordgs/vaulthub/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/pedrordgs/vaulthub/releases/tag/v1.0.0
-
