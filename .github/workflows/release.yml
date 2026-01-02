@@ -120,13 +120,29 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build and push Docker image (version tag)
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
           tags: |
             ${{ env.DOCKER_IMAGE }}:${{ steps.version.outputs.version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          labels: |
+            org.opencontainers.image.title=VaultHub
+            org.opencontainers.image.description=A modern web application for encrypting and decrypting Ansible vault strings
+            org.opencontainers.image.version=${{ steps.version.outputs.version }}
+            org.opencontainers.image.source=https://github.com/pedrordgs/vaulthub
+            org.opencontainers.image.licenses=MIT
+
+      - name: Build and push Docker image (latest tag for stable releases)
+        if: ${{ github.event.release.prerelease == false }}
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
             ${{ env.DOCKER_IMAGE }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
