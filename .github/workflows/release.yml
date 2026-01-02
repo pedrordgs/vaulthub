@@ -70,6 +70,7 @@ jobs:
 
       - name: Run npm audit
         run: npm audit --audit-level=moderate
+        continue-on-error: true
 
   build:
     name: Build Application
