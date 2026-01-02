@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Stateless architecture with no data persistence
 - Self-hosted deployment documentation
 - GitHub Actions CI/CD pipeline with lint, type-check, tests, and build
-- Release workflow with Docker image publishing to DockerHub
+- Release workflow with Docker image publishing to Docker Hub
 
 [Unreleased]: https://github.com/pedrordgs/vaulthub/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/pedrordgs/vaulthub/releases/tag/v1.0.0
