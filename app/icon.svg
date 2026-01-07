@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Background with rounded corners -->
+  <rect width="32" height="32" rx="6" fill="#1a1714"/>
+
+  <!-- Lock body -->
+  <rect x="9" y="14" width="14" height="12" rx="2" fill="#c67f32"/>
+
+  <!-- Lock shackle -->
+  <path
+    d="M12 14V11C12 8.79086 13.7909 7 16 7C18.2091 7 20 8.79086 20 11V14"
+    stroke="#c67f32"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Keyhole -->
+  <circle cx="16" cy="19" r="1.5" fill="#1a1714"/>
+  <rect x="15" y="19" width="2" height="3" fill="#1a1714"/>
+</svg>
