@@ -14,4 +14,3 @@ Sitemap: https://vaulthub-app.vercel.app/sitemap.xml
     },
   });
 }
-

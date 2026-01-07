@@ -1,6 +1,6 @@
 {
   "name": "vaulthub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern web application for encrypting and decrypting Ansible vault strings",
   "author": "Pedro Rodrigues",
   "license": "MIT",

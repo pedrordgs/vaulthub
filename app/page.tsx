@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Subtle grid pattern */}
-      <div 
+      <div
         className="pointer-events-none fixed inset-0 -z-10 opacity-[0.015] dark:opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)`,
@@ -44,14 +44,14 @@ export default function Home() {
         {/* Main Content */}
         <Tabs defaultValue="encrypt" className="space-y-6">
           <TabsList className="grid w-full grid-cols-2 bg-muted/60 p-1">
-            <TabsTrigger 
-              value="encrypt" 
+            <TabsTrigger
+              value="encrypt"
               className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
               <Lock className="h-4 w-4" />
               Encrypt
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="decrypt"
               className="gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
@@ -60,10 +60,10 @@ export default function Home() {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="encrypt" className="mt-6">
+          <TabsContent value="encrypt" className="my-6">
             <EncryptForm />
           </TabsContent>
-          <TabsContent value="decrypt" className="mt-6">
+          <TabsContent value="decrypt" className="my-6">
             <DecryptForm />
           </TabsContent>
         </Tabs>
@@ -72,18 +72,18 @@ export default function Home() {
         <footer className="mt-16 space-y-4 text-center text-xs text-muted-foreground">
           <p>AES-256 · Compatible with Ansible Vault · Stateless & Secure</p>
           <p>
-            <a 
-              href="https://github.com/pedrordgs/vaulthub" 
-              target="_blank" 
+            <a
+              href="https://github.com/pedrordgs/vaulthub"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors underline underline-offset-4"
             >
               Open Source
             </a>
             {" · "}
-            <a 
-              href="https://github.com/pedrordgs/vaulthub/blob/main/LICENSE" 
-              target="_blank" 
+            <a
+              href="https://github.com/pedrordgs/vaulthub/blob/main/LICENSE"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors underline underline-offset-4"
             >

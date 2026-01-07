@@ -32,7 +32,7 @@ describe('GET /api/health', () => {
         timestamp: '2024-01-01T00:00:00.000Z',
         uptime: 123.456,
         environment: process.env.NODE_ENV || 'development',
-        version: '1.0.0',
+        version: '1.0.1',
         service: 'vaulthub',
       },
       {
@@ -117,7 +117,7 @@ describe('GET /api/health', () => {
 
     expect(mockNextResponse.json).toHaveBeenCalledWith(
       expect.objectContaining({
-        version: '1.0.0',
+        version: '1.0.1',
       }),
       expect.any(Object),
     );
@@ -134,4 +134,3 @@ describe('GET /api/health', () => {
     );
   });
 });
-
