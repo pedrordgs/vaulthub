@@ -21,7 +21,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Install all dependencies (including dev) for build
-RUN npm install
+RUN npm install --ignore-scripts
 
 # Build the Next.js application
 ENV NEXT_TELEMETRY_DISABLED=1

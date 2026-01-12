@@ -65,12 +65,7 @@ jobs:
           cache: "npm"
 
       - name: Run npm audit
-        run: npm audit --audit-level=moderate
-        continue-on-error: true
-
-      - name: Run npm audit fix
-        run: npm audit fix --dry-run
-        continue-on-error: true
+        run: npm audit --audit-level=high
 
   build:
     name: Build Application

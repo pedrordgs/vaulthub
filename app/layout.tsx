@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -45,17 +46,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${jetbrainsMono.variable} font-sans bg-background text-foreground antialiased`}
       >
-        <ThemeProvider>
+        <ThemeProvider nonce={nonce}>
           <div className="noise-overlay" aria-hidden="true" />
           {children}
           <Toaster richColors position="bottom-center" />
