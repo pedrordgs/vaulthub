@@ -8,6 +8,8 @@
 
 - 🔐 Ansible Vault compatible (`$ANSIBLE_VAULT;1.1;AES256`)
 - 🔓 Encrypt plain text and decrypt vault strings
+- 📦 Batch mode — encrypt/decrypt multiple labeled entries at once
+- 📄 YAML import/export — import a `vault.yml` for bulk decryption; export encrypted results as `vault.yml`
 - 🎨 Modern UI with dark mode support
 - 🔒 Server-side processing, no data persistence
 - ⚡ Fast and lightweight
@@ -39,6 +41,8 @@ docker run -p 3000:3000 vaulthub:latest
 
 1. **Encrypt**: Enter plain text and password → Get encrypted vault string
 2. **Decrypt**: Paste vault string and password → Get decrypted text
+3. **Batch encrypt**: Add multiple labeled entries → Encrypt all with a single password → Optionally export as `vault.yml`
+4. **Batch decrypt**: Add multiple vault strings (or import a `vault.yml`) → Decrypt all at once
 
 ## Tech Stack
 
