@@ -1,6 +1,6 @@
 {
   "name": "vaulthub",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A modern web application for encrypting and decrypting Ansible vault strings",
   "author": "Pedro Rodrigues",
   "license": "MIT",
@@ -46,6 +46,7 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "js-yaml": "^4.1.1",
     "lucide-react": "^0.562.0",
     "next": "16.1.5",
     "next-themes": "^0.4.6",
@@ -61,6 +62,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@types/jest": "^30.0.0",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -82,7 +82,7 @@ export default function Home() {
             </a>
             {" · "}
             <a
-              href="https://github.com/pedrordgs/vaulthub/blob/main/LICENSE"
+              href="https://github.com/pedrordgs/vaulthub/blob/master/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors underline underline-offset-4"
