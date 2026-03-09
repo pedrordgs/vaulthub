@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Next.js from 16.1.1 to 16.1.5
+
+### Security
+
+- Bump minimatch from 3.1.2 to 3.1.5 and 9.0.5 to 9.0.9 (indirect dependency)
+
+## [1.1.1] - 2026-03-01
+
+### Security
+
+- Fix style Content Security Policy to allow inline styles required by theme provider
+
+## [1.1.0] - 2026-01-28
+
+### Security
+
+- Improve security headers (CSP, HSTS, X-Frame-Options, etc.) via `next.config.ts` and `proxy.ts`
+
 ## [1.0.1] - 2026-01-07
 
 ### Fixed
@@ -31,6 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Actions CI/CD pipeline with lint, type-check, tests, and build
 - Release workflow with Docker image publishing to Docker Hub
 
-[Unreleased]: https://github.com/pedrordgs/vaulthub/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/pedrordgs/vaulthub/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/pedrordgs/vaulthub/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/pedrordgs/vaulthub/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/pedrordgs/vaulthub/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/pedrordgs/vaulthub/releases/tag/v1.0.0

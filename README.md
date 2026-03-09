@@ -42,7 +42,7 @@ docker run -p 3000:3000 vaulthub:latest
 
 ## Tech Stack
 
-- Next.js 16 (App Router)
+- Next.js 16.1.5 (App Router)
 - TypeScript 5
 - Tailwind CSS 4
 - Custom encryption (AES-256-CTR + PBKDF2 + HMAC-SHA256)
